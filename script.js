@@ -21,12 +21,20 @@ function calcularNota() {
         (nota3 * 0.20) +
         (nota4 * 0.35);
 
+    let detalle =
+    "<br>Primera nota: " + (nota1 * 0.20).toFixed(2) +
+    "<br>Segunda nota: " + (nota2 * 0.25).toFixed(2) +
+    "<br>Tercera nota: " + (nota3 * 0.20).toFixed(2) +
+    "<br>Cuarta nota: " + (nota4 * 0.35).toFixed(2);
+
     resultado.innerHTML =
-        "Tu promedio final es: " + promedio.toFixed(2) +
-        "<br>" +
-        (promedio >= 11 ? "¡APROBADO!" : "DESAPROBADO");
+    "Tu promedio final es: " + promedio.toFixed(2) +
+    detalle +
+    "<br>" +
+    (promedio >= 11 ? "¡APROBADO!" : "DESAPROBADO");
 
     resultado.style.color = promedio >= 11 ? "green" : "red";
+    
 }
 function limpiarNotas() {
     document.getElementById("nota1").value = "";
