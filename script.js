@@ -28,3 +28,10 @@ function calcularNota() {
 
     resultado.style.color = promedio >= 11 ? "green" : "red";
 }
+function limpiarNotas() {
+    document.getElementById("nota1").value = "";
+    document.getElementById("nota2").value = "";
+    document.getElementById("nota3").value = "";
+    document.getElementById("nota4").value = "";
+    document.getElementById("resultado").innerHTML = "";
+}
