@@ -43,3 +43,14 @@ function limpiarNotas() {
     document.getElementById("nota4").value = "";
     document.getElementById("resultado").innerHTML = "";
 }
+window.onload = function() {
+    for (let i = 1; i <= 4; i++) {
+        let campo = document.getElementById("nota" + i);
+
+        campo.value = localStorage.getItem("nota" + i) || "";
+
+        campo.addEventListener("input", function() {
+            localStorage.setItem("nota" + i, campo.value);
+        });
+    }
+};
